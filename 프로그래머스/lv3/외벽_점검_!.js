@@ -54,9 +54,3 @@ console.log(solution(n, weak, dist));
 (n = 12), (weak = [1, 3, 4, 9, 10]), (dist = [3, 5, 7]);
 // result = 1
 console.log(solution(n, weak, dist));
-
-// 1 5 6 10 13 -> 4 1 4 3
-// 1 3 4 9 10 13 -> 2 1 5 1 3
-
-// 1명 - 간격 배열 하나 제거 하고 나머지 합 이내
-// 2명 - 간격 배열 2개 제거하고 나머지 합 이내 - 사이 합 고려
