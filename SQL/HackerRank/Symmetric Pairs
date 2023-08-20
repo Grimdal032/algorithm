@@ -1,0 +1,21 @@
+-- https://www.hackerrank.com/challenges/symmetric-pairs/problem?h_r=internal-search
+/*
+20 20   - x = y COUNT(*) == 2
+UNION
+20 21   - x < y (include x != y)
+22 23
+AND ASC
+*/
+SELECT x, y
+FROM functions
+WHERE x = y
+GROUP BY x, y
+HAVING COUNT(*) = 2
+
+UNION
+
+SELECT f1.x, f1.y
+FROM functions AS f1
+    INNER JOIN functions AS f2 ON f1.y = f2.x AND f1.x = f2.y
+WHERE f1.x < f1.y
+ORDER BY x

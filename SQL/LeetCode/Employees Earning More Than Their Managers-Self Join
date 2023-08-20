@@ -1,0 +1,6 @@
+-- https://leetcode.com/problems/employees-earning-more-than-their-managers/
+-- Self Join
+SELECT Employee.name AS Employee
+FROM Employee
+  LEFT JOIN Employee AS Manager ON Employee.ManagerId = Manager.id
+WHERE Employee.salary > Manager.salary
